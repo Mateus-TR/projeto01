@@ -1,0 +1,204 @@
+@charset "UTF-8"; /*Declarar que esse ducumento vai ter os caracteres UTF-7*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); /*Fonte externa*/
+@font-face { /*Colocar uma fonte interna*/
+    font-family: 'Android'; /*Nome dessa fonte interna*/
+    src: url('fontes/idroid.otf') format('opentype'); /*Url/tipo da fonte*/
+    font-weight: normal; /*Fonte sem negrito por definição*/
+    font-style: normal; /*Estilo da fonte*/
+}
+
+
+:root { /*"Declarar as variaveis globais, para todo o documento"*/
+    --cor0: #c5ebd6; /*Paleta de cores*/
+    --cor1: #83e1ad; /*Paleta de cores*/
+    --cor2: #3ddc84; /*Paleta de cores*/
+    --cor3: #2fa866; /*Paleta de cores*/
+    --cor4: #1a5c37; /*Paleta de cores*/
+    --cor5: #063d1e; /*Paleta de cores*/
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; /*Fonte padrão*/
+    --fonte-destaque: 'Bebas Neue', cursive; /*Fonte de destaque*/
+    --fonte-android: 'Android', cursive; /*Fonte principal*/
+}
+
+* { /*Para todos os elementos do HTML*/
+    margin: 0px; /*Tirar todas as margens pré-definidas das caixas de todos os elementos*/
+    padding: 0px; /*Tirar todas os padding pré-definidas das caixas de todos os elementos*/
+    text-decoration: none; /*Tirar todas as decorações pré-definidas de todos os textos*/
+}
+
+body { /*Corpo do site*/
+    background-color: var(--cor0); /*Background color do site inteiro*/
+    font-family: var(--fonte-padrao); /*Fonte de todo o site*/
+}
+
+header { /*Cabeçalho*/
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /*Linear gradient do cabeçalho*/
+    min-height: 150px; /*Altura minima do cabeçalho independente do tamanno da tela*/
+    text-align: center; /*Alinhamento de todos os textos do cabeçalho*/
+    padding-top: 30px; /*Padding superior do cabrçalho*/
+}
+
+header > h1 { /*Titulo principal do cabeçalho*/
+    color: white; /*Cor do titulo*/
+    font-family: var(--fonte-destaque); /*Fonte do titulo*/
+    margin-bottom: 10px; /*Margin inferior do titulo*/
+    font-size: 3em; /*Tamanho da fonte*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.312); /*Sombreamento das letras*/
+    font-weight: normal; /*Fonte sem negrito*/
+}
+
+header > p { /*Paragrafo do cabeçalho*/
+    color: white; /*Cor do texto*/
+    font-family: var(--fonte-padrao); /*Fonte do texto*/
+    font-size: 1.2em; /*Tamanho do texto*/
+    max-width: 600px; /*Largura maxima que o texto vai aderir independente do tamanho da tela*/
+    margin: auto; /*Margin auto para centralizar o texto sempre no meio da tela*/
+    padding-right: 10px; /*Paddig inteiro da direita*/
+    padding-left: 10px; /*Paddig inteiro da esquerda*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.312); /*Sombreamento do texto do cabeçalho*/
+}
+
+nav { /*Painel de navegação*/
+    background-color: var(--cor5); /*Cor do background*/
+    padding: 10px; /*Padding do painel*/ 
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.345); /*Sombreamendo desse painel*/
+}
+
+nav > a { /*Links do painel de navegação*/
+    margin-top: 20px; /*Margin superior desse painel */
+    color: var(--cor1); /*Cor do texto desse painel*/
+    font-family: var(--fonte-padrao); /*Fonte dos textos*/
+    padding: 10px; /*Padding do painel*/
+    font-weight: bold; /*Fonte em negrito*/
+} 
+
+nav > a:hover { /*Pseudo classe (após passar com o mouse em cima do link)*/
+    background-color: var(--cor3); /*Cor do background*/
+    color: var(--cor5); /*Cor do texto*/
+    border-radius: 5px; /*Bordas arredondadas da caixa*/
+    transition-duration: 0.5s; /*Transição do efeito*/
+}
+    
+main { /*Corpo principal do site*/
+    background-color: white; /*Cor do background*/
+    max-width: 1000px; /*Largura maxima da caixa*/
+    min-width: 300px; /*Largura minima da caixa*/
+    margin: auto; /*Margin auto para centralizar a caixa no centro da tela*/
+    padding: 20px; /*Padding da caixa*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411); /*Sombreamento da caixa*/
+    margin-bottom: 30px; /*Margin inferior*/
+    border-radius: 0px 0px 10px 10px; /*Bordas arredondadas apenas na parte inferior da caixa*/
+}
+
+main img { /*Todas as imagens da TAG main*/
+    width: 100%; /*As imagens vão ocupar a largura maxima da caixa*/
+}
+
+main p { /*Todos os paragrafos do main*/
+    margin: 15px 0px 15px 0px; /*Pading dos paragrafos*/
+    text-align: justify; /*Justificar o texto dos paragrafos*/
+    text-indent: 30px; /*Identar a 1° linha do texto para a direita*/
+    line-height: 2.5em; /*Distancia entre as linhas do texto*/
+    font-size: 1.1; /*Tamanho da fonte*/
+}
+
+main strong { /*Para todas as marcações de "negrito" dentro da tag main*/
+    color: var(--cor4); /*Cor do texto*/
+    font-weight: bold; /*Texto em negrito*/
+}
+
+main a { /*Para todos os links da tag main*/
+    font-weight: bold; /*Texto em negrito*/
+    color: var(--cor5); /*Cor do texto*/
+    background-color: var(--cor1); /*Cor do background do texto*/
+    padding: 2px 0px 2px 6px; /*Padding da caixa*/
+}
+
+main a::after { /*Pseudo-elemento (apos todo link)*/
+    content: "\1F517"; /*Colocar o caracter de "corrente"*/
+}
+
+main a:hover { /*Pseudo-classe (quando o usuario passar com o mouse em cima do link)*/
+    text-decoration: underline; /*Sublinhar o texto*/
+    color: var(--cor4); /*Cor do texto*/
+}
+
+.img-pequeno { /*Imagem pequena do documento*/
+    display: block; /*Idicar que vai ser um display de "bloco" (box-level)*/
+    margin: auto; /*Margem da imagem*/
+    max-width: 350px; /*Largura maxima que a imagem irá aderir*/
+}
+
+.video { /*Para deixar o video responsivo*/
+    background-color: var(--cor5); /*Para deixar o video responsivo*/
+    margin: 0px -20px 30px -20px; /*Para deixar o video responsivo*/
+    padding: 20px; /*Para deixar o video responsivo*/
+    padding-bottom: 59%; /*Para deixar o video responsivo*/
+    position: relative; /*Para deixar o video responsivo*/
+}
+
+div.video > iframe { /*Para deixar o video responsivo*/
+    position: absolute; /*Para deixar o video responsivo*/
+    top: 5%; /*Para deixar o video responsivo*/
+    left: 5%; /*Para deixar o video responsivo*/
+    width: 90%; /*Para deixar o video responsivo*/
+    height: 90%; /*Para deixar o video responsivo*/
+}
+
+aside { /*Texto relativo ao artigo*/
+    background-color: var(--cor1); /*Cor do background*/
+    padding: 10px; /*Padding da caixa*/
+    border-radius: 10px; /*Bordas arredondadas*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.29); /*Sombreamendo da caixa*/
+}
+
+aside > h3 { /*"titulo" do texto relativo ao artigo*/
+    background-color: var(--cor4); /**Cor Do background*/
+    color: white; /*Cor do texto*/
+    padding: 10px; /*Padding da caixa*/
+    margin: -10px -10px 0px -10px; /*Margem "inversa" da caixa*/
+    border-radius: 10px 10px 0px 0px; /*Bordas superiores arredondadas*/
+}
+
+aside > ul { /*Lista do texto relativo ao artigo */
+    list-style-type: '\2714\00A0\00A0'; /*Simbolo de verificado +2 espaços*/
+    list-style-position: inside; /*Incluir a "decoração" da lista na caixa*/ 
+    columns: 2; /*Dividir a lista em 2 colunas*/
+}
+
+main h1 { /*Tituo pricipal do main*/
+    color: var(--cor5); /*Cor do texto*/
+    font-family: var(--fonte-android); /*Fonte do titulo*/
+    font-size: 2em; /*Tamanho da fonte*/
+    font-weight: normal; /*Titulo em negrito*/
+    margin: 20px; /*Margem do titulo*/
+}
+
+main h2 { /*Titulo secundario do main*/
+    font-family: var(--fonte-android); /*Fonte do titulo*/
+    color: var(--cor4); /*Cor do texto*/
+    font-size: 1.5em; /*Tamanho da fontr*/
+    background-image: linear-gradient(to right, var(--cor1), transparent ); /*Background da cor01 até transparente*/  
+    padding: 2px 10px 2px 10px; /*Padding da "caixa"*/
+    border-radius: 10px; /*Bordas arredondadas da "caixa"*/
+    font-weight: normal; /*Não deixar o titulo em negrito*/
+}
+
+footer { /*Rodapé do site*/
+    background-color: var(--cor5); /*Cor do background do rodapé*/
+    color: white; /*Cor do texto do rodapé*/
+    text-align: center; /*Alinhar todos os textos do rodapé no centro*/
+    padding: 10px; /*Padding do rodapé*/
+    font-size: 0.8em; /*Tamanho da fonte*/
+}
+
+footer a { /*Links do rodapé*/
+    color: white; /*Cor do texto*/
+    font-weight: bold; /*Texto em negrito*/
+}
+
+footer a:hover { /*Após o usuario passar com o mouse em cima do link*/
+    text-decoration: underline; /*Texto sublinhado*/
+    color: var(--cor1); /*Cor do textop*/
+}
