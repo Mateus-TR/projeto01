@@ -56,6 +56,7 @@ header > p { /*Paragrafo do cabeçalho*/
     margin: auto; /*Margin auto para centralizar o texto sempre no meio da tela*/
     padding-right: 10px; /*Paddig inteiro da direita*/
     padding-left: 10px; /*Paddig inteiro da esquerda*/
+    padding-bottom: 30px; /*Padding da parte inferior*/
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.312); /*Sombreamento do texto do cabeçalho*/
 }
 
